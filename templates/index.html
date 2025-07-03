@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Home - StripeApp{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="bg-gradient-to-r from-primary to-secondary text-white">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Manage Your Subscriptions
+                <span class="block text-yellow-300">Like a Pro</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Track plan changes, analyze billing history, and manage your subscriptions with comprehensive analytics and insights.
+            </p>
+            <div class="space-x-4">
+                {% if not user %}
+                    <a href="{{ url_for('signup') }}" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                        Get Started Free
+                    </a>
+                    <a href="{{ url_for('plans') }}" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block">
+                        View Plans
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('dashboard') }}" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                        Go to Dashboard
+                    </a>
+                    <a href="{{ url_for('plans') }}" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block">
+                        Manage Plans
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Powerful Features for Subscription Management
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Everything you need to track, analyze, and manage your subscription business.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Plan Change Analytics</h3>
+                <p class="text-gray-600">
+                    Track every plan change with detailed timeline and financial impact analysis. See exactly what happened when.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Proration Tracking</h3>
+                <p class="text-gray-600">
+                    Understand proration credits and charges for mid-cycle plan changes. Complete transparency on billing adjustments.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Complete History</h3>
+                <p class="text-gray-600">
+                    Access complete subscription and billing history. Never lose track of what plans users have had.
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Stripe Integration</h3>
+                <p class="text-gray-600">
+                    Seamless integration with Stripe for payments, subscriptions, and customer management.
+                </p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Secure & Reliable</h3>
+                <p class="text-gray-600">
+                    Bank-level security with encrypted data storage and secure authentication for all users.
+                </p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Mobile Friendly</h3>
+                <p class="text-gray-600">
+                    Responsive design that works perfectly on desktop, tablet, and mobile devices.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-bold text-primary mb-2">100%</div>
+                <div class="text-gray-600">Stripe Compatible</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-primary mb-2">24/7</div>
+                <div class="text-gray-600">Real-time Tracking</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-primary mb-2">∞</div>
+                <div class="text-gray-600">Plan Changes</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-primary mb-2">✓</div>
+                <div class="text-gray-600">Complete History</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+{% if not user %}
+<div class="bg-primary text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Get Started?
+        </h2>
+        <p class="text-xl mb-8">
+            Join thousands of businesses using our platform to manage their subscriptions.
+        </p>
+        <div class="space-x-4">
+            <a href="{{ url_for('signup') }}" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                Create Free Account
+            </a>
+            <a href="{{ url_for('plans') }}" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block">
+                View Pricing
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

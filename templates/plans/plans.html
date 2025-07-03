@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+
+{% block title %}Plans - StripeApp{% endblock %}
+
+{% block content %}
+<!-- Header Section -->
+<div class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Choose Your Plan</h1>
+        <p class="text-xl md:text-2xl mb-8">
+            Select the perfect plan for your subscription management needs
+        </p>
+        {% if current_subscription %}
+        <div class="bg-white/20 backdrop-blur rounded-lg p-4 max-w-md mx-auto">
+            <p class="text-lg">
+                <i class="fas fa-star mr-2"></i>
+                Currently on: <strong>{{ current_subscription.product_name }}</strong>
+            </p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Plans Section -->
+<div class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        {% if available_plans %}
+        <div class="grid grid-cols-1 md:grid-cols-{{ available_plans|length if available_plans|length <= 3 else 3 }} gap-8">
+            {% for plan in available_plans %}
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden {% if current_subscription and current_subscription.product_name == plan.product_name %}ring-4 ring-primary{% endif %}">
+                <!-- Plan Header -->
+                <div class="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-8 text-center relative">
+                    {% if current_subscription and current_subscription.product_name == plan.product_name %}
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Current Plan
+                        </span>
+                    </div>
+                    {% endif %}
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ plan.product_name }}</h3>
+                    <div class="text-4xl font-bold text-primary mb-2">
+                        ${{ "%.0f"|format(plan.unit_amount / 100) }}
+                        <span class="text-lg text-gray-500 font-normal">
+                            /{{ plan.recurring_interval }}
+                        </span>
+                    </div>
+                    {% if plan.product_description %}
+                    <p class="text-gray-600">{{ plan.product_description }}</p>
+                    {% endif %}
+                </div>
+
+                <!-- Plan Features -->
+                <div class="px-6 py-8">
+                    <ul class="space-y-4 mb-8">
+                        {% if plan.product_name == 'Basic' %}
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Basic subscription tracking</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Plan change notifications</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Email support</span>
+                        </li>
+                        {% elif plan.product_name == 'Pro' %}
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Proration tracking</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Complete billing history</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                        {% elif plan.product_name == 'Premium' %}
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Everything in Pro</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Custom reporting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>API access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>24/7 phone support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Dedicated account manager</span>
+                        </li>
+                        {% else %}
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Full subscription management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                        {% endif %}
+                    </ul>
+
+                    <!-- CTA Button -->
+                    {% if user %}
+                        {% if current_subscription and current_subscription.product_name == plan.product_name %}
+                        <button class="w-full py-3 px-4 bg-gray-100 text-gray-500 rounded-lg font-semibold cursor-not-allowed" disabled>
+                            Current Plan
+                        </button>
+                        {% else %}
+                        <form method="POST" action="{{ url_for('create_checkout_session') }}">
+                            <input type="hidden" name="lookup_key" value="{{ plan.lookup_key }}">
+                            <button type="submit" class="w-full py-3 px-4 bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                                {% if current_subscription %}
+                                    {% if plan.unit_amount > (current_subscription.price|replace('$', '')|replace(' AUD', '')|float * 100) %}
+                                        Upgrade to {{ plan.product_name }}
+                                    {% else %}
+                                        Downgrade to {{ plan.product_name }}
+                                    {% endif %}
+                                {% else %}
+                                    Choose {{ plan.product_name }}
+                                {% endif %}
+                            </button>
+                        </form>
+                        {% endif %}
+                    {% else %}
+                    <a href="{{ url_for('signup') }}" class="block w-full py-3 px-4 bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center">
+                        Get Started
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-16">
+            <i class="fas fa-exclamation-triangle text-yellow-500 text-4xl mb-4"></i>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">No Plans Available</h2>
+            <p class="text-gray-600 mb-8">There are currently no active plans configured.</p>
+            {% if user %}
+            <a href="{{ url_for('dashboard') }}" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                Go to Dashboard
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Comparison Table -->
+{% if available_plans and available_plans|length > 1 %}
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Compare Plans</h2>
+            <p class="text-xl text-gray-600">See what's included in each plan</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
+                        {% for plan in available_plans %}
+                        <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">
+                            {{ plan.product_name }}
+                            <div class="text-primary font-bold">
+                                ${{ "%.0f"|format(plan.unit_amount / 100) }}/{{ plan.recurring_interval }}
+                            </div>
+                        </th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 text-sm text-gray-900">Subscription Tracking</td>
+                        {% for plan in available_plans %}
+                        <td class="px-6 py-4 text-center">
+                            <i class="fas fa-check text-green-500"></i>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm text-gray-900">Plan Change Analytics</td>
+                        {% for plan in available_plans %}
+                        <td class="px-6 py-4 text-center">
+                            {% if plan.product_name != 'Basic' %}
+                            <i class="fas fa-check text-green-500"></i>
+                            {% else %}
+                            <i class="fas fa-times text-gray-400"></i>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm text-gray-900">Proration Tracking</td>
+                        {% for plan in available_plans %}
+                        <td class="px-6 py-4 text-center">
+                            {% if plan.product_name == 'Premium' or plan.product_name == 'Pro' %}
+                            <i class="fas fa-check text-green-500"></i>
+                            {% else %}
+                            <i class="fas fa-times text-gray-400"></i>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm text-gray-900">API Access</td>
+                        {% for plan in available_plans %}
+                        <td class="px-6 py-4 text-center">
+                            {% if plan.product_name == 'Premium' %}
+                            <i class="fas fa-check text-green-500"></i>
+                            {% else %}
+                            <i class="fas fa-times text-gray-400"></i>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- FAQ Section -->
+<div class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-8">
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I change my plan anytime?</h3>
+                <p class="text-gray-600">Yes! You can upgrade or downgrade your plan at any time. Changes are prorated and will be reflected in your next billing cycle.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">How does billing work?</h3>
+                <p class="text-gray-600">All plans are billed monthly. When you change plans mid-cycle, you'll receive credits for unused time and charges for the new plan.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I cancel anytime?</h3>
+                <p class="text-gray-600">Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your current billing period.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
+                <p class="text-gray-600">We accept all major credit cards, debit cards, and other payment methods supported by Stripe.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

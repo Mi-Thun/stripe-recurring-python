@@ -1,0 +1,379 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - StripeApp{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">User Profile</h1>
+        <p class="text-gray-600">Manage your account settings and view billing information.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- User Information -->
+        <div class="lg:col-span-1">
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">Account Information</h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Name</label>
+                        <p class="mt-1 text-sm text-gray-900">{{ user.name }}</p>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                        <p class="mt-1 text-sm text-gray-900">{{ user.email }}</p>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Member Since</label>
+                        <p class="mt-1 text-sm text-gray-900">
+                            {{ user.created_at.strftime('%B %d, %Y') if user.created_at else 'N/A' }}
+                        </p>
+                    </div>
+
+                    {% if stripe_customer %}
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Customer ID</label>
+                        <p class="mt-1 text-sm text-gray-500 font-mono">{{ stripe_customer.stripe_id }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="mt-6">
+                    <button id="editProfileBtn" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors">
+                        Edit Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription & Billing Details -->
+        <div class="lg:col-span-2">
+            {% if stripe_customer and plan_history %}
+            <!-- Current Subscription Status -->
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <h2 class="text-xl font-semibold mb-4">Current Subscription</h2>
+                
+                {% if plan_history.summary.current_plans %}
+                    {% set current_plan = plan_history.summary.current_plans[0] %}
+                    <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                        <div>
+                            <h3 class="font-semibold text-green-800">{{ current_plan.get('product_name', 'N/A') }}</h3>
+                            <p class="text-green-600">{{ current_plan.get('billing_frequency', 'N/A') }}</p>
+                            <p class="text-sm text-green-600">
+                                {{ current_plan.get('price', 'Price not available') }}
+                            </p>
+                        </div>
+                        <div class="text-green-500 text-2xl">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Status</label>
+                            <p class="mt-1 text-sm text-gray-900 capitalize">{{ current_plan.get('subscription_status', 'active') }}</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Next Billing</label>
+                            <p class="mt-1 text-sm text-gray-900">
+                                {% if current_plan.get('current_period_end') %}
+                                    {{ current_plan['current_period_end'].strftime('%B %d, %Y') }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="text-center py-8 text-gray-500">
+                        <i class="fas fa-info-circle text-4xl mb-4"></i>
+                        <p>No active subscription plans found.</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Summary Statistics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <div class="text-2xl font-bold text-blue-600">{{ plan_history.summary.total_amount_paid or '$0.00' }}</div>
+                    <div class="text-sm text-gray-600">Total Spent</div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <div class="text-2xl font-bold text-green-600">{{ plan_history.summary.plan_changes|length }}</div>
+                    <div class="text-sm text-gray-600">Plan Changes</div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <div class="text-2xl font-bold text-purple-600">{{ plan_history.summary.prorations|length }}</div>
+                    <div class="text-sm text-gray-600">Prorations</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+                
+                <div class="space-y-6">
+                    {% if plan_history.summary.plan_changes %}
+                        {% for change in plan_history.summary.plan_changes[:3] %}
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-exchange-alt text-white text-xs"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-900">
+                                    <span class="font-medium">Plan Changed:</span>
+                                    {% if change.get('from_plan') %}
+                                        {{ change['from_plan'].get('product_name', 'Unknown') }} → {{ change['to_plan'].get('product_name', 'Unknown') }}
+                                    {% else %}
+                                        Started {{ change['to_plan'].get('product_name', 'Unknown') }}
+                                    {% endif %}
+                                </p>
+                                <p class="text-xs text-gray-500">{{ change.get('timestamp').strftime('%B %d, %Y at %I:%M %p') if change.get('timestamp') else 'N/A' }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if plan_history.summary.prorations %}
+                        {% for proration in plan_history.summary.prorations[:3] %}
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-dollar-sign text-white text-xs"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-900">
+                                    <span class="font-medium">Proration:</span>
+                                    {{ proration.get('description', 'Plan change adjustment') }}
+                                </p>
+                                <p class="text-xs text-gray-500">
+                                    {{ proration.get('date').strftime('%B %d, %Y') if proration.get('date') else 'N/A' }} - 
+                                    <span class="font-medium">${{ "%.2f"|format(proration.get('amount', 0)/100) }}</span>
+                                </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                {% if plan_history.summary.plan_changes|length > 5 or plan_history.summary.prorations|length > 3 %}
+                <div class="mt-4 pt-4 border-t">
+                    <a href="{{ url_for('analytics') }}" class="text-primary hover:text-primary-dark text-sm font-medium">
+                        View Full History →
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            
+            {% else %}
+            <!-- No Stripe Customer -->
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="text-gray-500">
+                    <i class="fas fa-credit-card text-4xl mb-4"></i>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">No Billing Information</h3>
+                    <p class="text-gray-600 mb-4">Start by subscribing to one of our plans to see your billing information here.</p>
+                    <a href="{{ url_for('plans') }}" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors">
+                        <i class="fas fa-plus mr-2"></i>Choose a Plan
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Invoice History -->
+            {% if plan_history.invoices %}
+            <div class="bg-white p-6 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-semibold mb-4">Invoice History</h2>
+                <p class="text-gray-600 mb-4">All your billing statements and receipts</p>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Invoice</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            {% for invoice in plan_history.invoices %}
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-gray-900">
+                                        #{{ invoice.stripe_id[-8:] if invoice.stripe_id else 'N/A' }}
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        {% if invoice.period_start and invoice.period_end %}
+                                            {{ invoice.period_start.strftime('%b %d') }} - {{ invoice.period_end.strftime('%b %d, %Y') }}
+                                        {% else %}
+                                            Period not available
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                    {% if invoice.created_at_stripe %}
+                                        {{ invoice.created_at_stripe.strftime('%B %d, %Y') }}
+                                    {% else %}
+                                        Date unavailable
+                                    {% endif %}
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                    {% if invoice.amount_paid %}
+                                        ${{ "%.2f"|format(invoice.amount_paid/100) }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                    <div class="text-xs text-gray-500">{{ invoice.currency|upper if invoice.currency else 'USD' }}</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
+                                        {% if invoice.status == 'paid' %}bg-green-100 text-green-800
+                                        {% elif invoice.status == 'open' %}bg-yellow-100 text-yellow-800
+                                        {% elif invoice.status == 'draft' %}bg-gray-100 text-gray-800
+                                        {% else %}bg-red-100 text-red-800{% endif %}">
+                                        {{ invoice.status|title }}
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    {% if invoice.status == 'paid' %}
+                                        <button onclick="downloadInvoicePDF('{{ invoice.stripe_id }}')" 
+                                                class="text-primary hover:text-indigo-900 flex items-center space-x-1">
+                                            <i class="fas fa-download"></i>
+                                            <span>Download PDF</span>
+                                        </button>
+                                    {% else %}
+                                        <span class="text-gray-400">PDF not available</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Billing Portal Access -->
+            {% if stripe_customer %}
+            <div class="bg-white p-6 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-semibold mb-4">Billing Management</h2>
+                <p class="text-gray-600 mb-4">Manage your billing information, download invoices, and update payment methods.</p>
+                
+                <form method="POST" action="{{ url_for('create_billing_portal_session') }}" class="inline">
+                    <button type="submit" class="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary/90 transition-colors">
+                        <i class="fas fa-external-link-alt mr-2"></i>Open Billing Portal
+                    </button>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div id="editProfileModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Edit Profile</h3>
+            
+            <form method="POST" action="{{ url_for('update_profile') }}">
+                <div class="mb-4">
+                    <label for="editName" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" id="editName" name="name" value="{{ user.name }}" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                           required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="editEmail" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" id="editEmail" name="email" value="{{ user.email }}"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                           required>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button type="submit" class="flex-1 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors">
+                        Save Changes
+                    </button>
+                    <button type="button" id="cancelEditBtn" class="flex-1 bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 transition-colors">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+// Edit Profile Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const editBtn = document.getElementById('editProfileBtn');
+    const modal = document.getElementById('editProfileModal');
+    const cancelBtn = document.getElementById('cancelEditBtn');
+    
+    // Show modal
+    editBtn.addEventListener('click', function() {
+        modal.classList.remove('hidden');
+    });
+    
+    // Hide modal
+    function hideModal() {
+        modal.classList.add('hidden');
+    }
+    
+    cancelBtn.addEventListener('click', hideModal);
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            hideModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            hideModal();
+        }
+    });
+});
+
+// Function to download invoice PDF
+async function downloadInvoicePDF(invoiceId) {
+    try {
+        // Show loading state
+        const button = event.target.closest('button');
+        const originalContent = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Loading...</span>';
+        button.disabled = true;
+        
+        // Fetch PDF URL from our API
+        const response = await fetch(`/api/invoice/${invoiceId}/pdf`);
+        const data = await response.json();
+        
+        if (response.ok && data.pdf_url) {
+            // Open PDF in new tab
+            window.open(data.pdf_url, '_blank');
+        } else {
+            alert('Error: ' + (data.error || 'Could not download PDF'));
+        }
+    } catch (error) {
+        console.error('Error downloading PDF:', error);
+        alert('Error downloading PDF. Please try again.');
+    } finally {
+        // Restore button state
+        const button = event.target.closest('button');
+        button.innerHTML = originalContent;
+        button.disabled = false;
+    }
+}
+</script>
+
+{% endblock %}

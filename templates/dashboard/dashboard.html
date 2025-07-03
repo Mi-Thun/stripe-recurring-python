@@ -1,0 +1,355 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - StripeApp{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Welcome back, {{ user.name }}!</h1>
+        <p class="text-gray-600">Here's an overview of your subscription and billing activity.</p>
+    </div>
+
+    {% if plan_history %}
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center">
+                <div class="text-primary text-2xl mr-4">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Current Plan</p>
+                    <p class="text-lg font-semibold">
+                        {% if plan_history.summary.current_plans %}
+                            {{ plan_history.summary.current_plans[0]['product_name'] }}
+                        {% else %}
+                            No Active Plan
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center">
+                <div class="text-green-500 text-2xl mr-4">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Total Paid</p>
+                    <p class="text-lg font-semibold">{{ plan_history.summary.total_amount_paid }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center">
+                <div class="text-blue-500 text-2xl mr-4">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Plan Changes</p>
+                    <p class="text-lg font-semibold">{{ plan_history.summary.total_plan_changes }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center">
+                <div class="text-purple-500 text-2xl mr-4">
+                    <i class="fas fa-receipt"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Invoices</p>
+                    <p class="text-lg font-semibold">{{ plan_history.summary.total_invoices }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Subscription -->
+    {% if plan_history.summary.current_plans %}
+    <div class="bg-white rounded-lg shadow mb-8">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900">Current Subscription</h2>
+        </div>
+        <div class="p-6">
+            {% for plan in plan_history.summary.current_plans %}
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-gray-900">{{ plan['product_name'] }}</h3>
+                    <p class="text-gray-600">{{ plan['price'] }} • {{ plan['billing_frequency'] }}</p>
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <div>
+                            <p class="text-sm text-gray-500">Status: <span class="text-green-600 font-medium">{{ plan['subscription_status']|title }}</span></p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Next Billing: 
+                                <span class="font-medium">
+                                    {% if plan.get('current_period_end') %}
+                                        {{ plan['current_period_end'].strftime('%B %d, %Y') }}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right ml-4">
+                    <form method="POST" action="{{ url_for('create_portal_session') }}" class="inline">
+                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-cog mr-2"></i>Manage Subscription
+                        </button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Quick Actions -->
+    <div class="bg-white rounded-lg shadow mb-8">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900">Quick Actions</h2>
+        </div>
+        <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="{{ url_for('plans') }}" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <i class="fas fa-list text-primary text-xl mr-3"></i>
+                    <div>
+                        <h3 class="font-semibold">View Plans</h3>
+                        <p class="text-sm text-gray-600">Browse available plans</p>
+                    </div>
+                </a>
+                
+                <a href="{{ url_for('profile') }}" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <i class="fas fa-user text-primary text-xl mr-3"></i>
+                    <div>
+                        <h3 class="font-semibold">Profile</h3>
+                        <p class="text-sm text-gray-600">Manage your account</p>
+                    </div>
+                </a>
+                
+                {% if stripe_customer %}
+                <form method="POST" action="{{ url_for('create_portal_session') }}" class="block">
+                    <button type="submit" class="w-full flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
+                        <i class="fas fa-cog text-primary text-xl mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold">Billing Portal</h3>
+                            <p class="text-sm text-gray-600">Manage billing details</p>
+                        </div>
+                    </button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Plan Change Timeline -->
+    {% if plan_history.summary.plan_change_timeline %}
+    <div class="bg-white rounded-lg shadow mb-8">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900">Plan Change Timeline</h2>
+        </div>
+        <div class="p-6">
+            <div class="space-y-4">
+                {% for change in plan_history.summary.plan_change_timeline[-5:] %}
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-{% if change.event == 'plan_created' %}plus{% elif change.event == 'plan_updated' %}edit{% else %}credit-card{% endif %} text-white text-xs"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-semibold text-gray-900">
+                                {{ change['event'].replace('_', ' ').title() }}
+                                {% if change['plan_name'] %}
+                                - {{ change['plan_name'] }}
+                                {% endif %}
+                            </h3>
+                            <span class="text-sm text-gray-500">{{ change['date'].strftime('%b %d, %Y') if change['date'] else 'N/A' }}</span>
+                        </div>
+                        <p class="text-gray-600">{{ change['price'] }} • {{ change['billing_frequency'] }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if plan_history.summary.plan_change_timeline|length > 5 %}
+            <div class="mt-4 text-center">
+                <a href="{{ url_for('profile') }}" class="text-primary hover:text-indigo-500">
+                    View all {{ plan_history.summary.plan_change_timeline|length }} changes
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Proration History -->
+    {% if plan_history.summary.proration_history %}
+    <div class="bg-white rounded-lg shadow">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900">Recent Billing Adjustments</h2>
+        </div>
+        <div class="p-6">
+            <div class="space-y-3">
+                {% for proration in plan_history.summary.proration_history[-5:] %}
+                <div class="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
+                    <div>
+                        <p class="text-sm text-gray-900">{{ proration.description }}</p>
+                        <p class="text-xs text-gray-500">{{ proration.date.strftime('%b %d, %Y at %I:%M %p') if proration.date else 'N/A' }}</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="font-semibold {% if proration.amount.startswith('-') %}text-green-600{% else %}text-red-600{% endif %}">
+                            {{ proration.amount }}
+                        </span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if plan_history.summary.proration_history|length > 5 %}
+            <div class="mt-4 text-center">
+                <a href="{{ url_for('profile') }}" class="text-primary hover:text-indigo-500">
+                    View all {{ plan_history.summary.proration_history|length }} adjustments
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Recent Invoices -->
+    {% if plan_history.invoices %}
+    <div class="bg-white rounded-lg shadow mb-8">
+        <div class="border-b border-gray-200 px-6 py-4">
+            <h3 class="text-lg font-semibold text-gray-900">Recent Invoices</h3>
+            <p class="text-sm text-gray-600">Download and view your billing statements</p>
+        </div>
+        <div class="p-6">
+            <div class="space-y-4">
+                {% for invoice in plan_history.invoices[:5] %}
+                <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-file-invoice text-blue-600"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">
+                                Invoice #{{ invoice.stripe_id[-8:] if invoice.stripe_id else 'N/A' }}
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                {% if invoice.created_at_stripe %}
+                                    {{ invoice.created_at_stripe.strftime('%B %d, %Y') }}
+                                {% else %}
+                                    Date unavailable
+                                {% endif %}
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium 
+                                    {% if invoice.status == 'paid' %}bg-green-100 text-green-800
+                                    {% elif invoice.status == 'open' %}bg-yellow-100 text-yellow-800
+                                    {% elif invoice.status == 'draft' %}bg-gray-100 text-gray-800
+                                    {% else %}bg-red-100 text-red-800{% endif %}">
+                                    {{ invoice.status|title }}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="text-right">
+                            <p class="text-sm font-semibold text-gray-900">
+                                {% if invoice.amount_paid %}
+                                    ${{ "%.2f"|format(invoice.amount_paid/100) }}
+                                {% else %}
+                                    $0.00
+                                {% endif %}
+                            </p>
+                            <p class="text-xs text-gray-500">{{ invoice.currency|upper if invoice.currency else 'USD' }}</p>
+                        </div>
+                        {% if invoice.status == 'paid' %}
+                        <button onclick="downloadInvoicePDF('{{ invoice.stripe_id }}')" 
+                                class="flex items-center space-x-2 bg-primary text-white px-3 py-2 rounded-md hover:bg-indigo-700 transition-colors text-sm">
+                            <i class="fas fa-download"></i>
+                            <span>PDF</span>
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if plan_history.invoices|length > 5 %}
+            <div class="mt-4 text-center">
+                <a href="{{ url_for('profile') }}" class="text-primary hover:text-indigo-500">
+                    View all {{ plan_history.invoices|length }} invoices
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% else %}
+    <!-- No Stripe Customer -->
+    <div class="bg-white rounded-lg shadow text-center py-16">
+        <i class="fas fa-credit-card text-gray-400 text-4xl mb-4"></i>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">No Subscription Yet</h2>
+        <p class="text-gray-600 mb-8">Get started by choosing a plan that fits your needs.</p>
+        <a href="{{ url_for('plans') }}" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+            View Plans
+        </a>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+// Function to download invoice PDF
+async function downloadInvoicePDF(invoiceId) {
+    try {
+        // Show loading state
+        const button = event.target.closest('button');
+        const originalContent = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Loading...</span>';
+        button.disabled = true;
+        
+        // Fetch PDF URL from our API
+        const response = await fetch(`/api/invoice/${invoiceId}/pdf`);
+        const data = await response.json();
+        
+        if (response.ok && data.pdf_url) {
+            // Open PDF in new tab
+            window.open(data.pdf_url, '_blank');
+        } else {
+            alert('Error: ' + (data.error || 'Could not download PDF'));
+        }
+    } catch (error) {
+        console.error('Error downloading PDF:', error);
+        alert('Error downloading PDF. Please try again.');
+    } finally {
+        // Restore button state
+        const button = event.target.closest('button');
+        button.innerHTML = originalContent;
+        button.disabled = false;
+    }
+}
+
+// Add some interactive behavior for invoice rows
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-hide flash messages after 5 seconds
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => {
+        setTimeout(() => {
+            alert.style.transition = 'opacity 0.5s';
+            alert.style.opacity = '0';
+            setTimeout(() => {
+                alert.remove();
+            }, 500);
+        }, 5000);
+    });
+});
+</script>
+
+{% endblock %}

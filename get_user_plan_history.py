@@ -48,6 +48,36 @@ class UserPlanHistoryFetcher:
             print(f"❌ Database connection failed: {e}")
             sys.exit(1)
     
+    def safe_datetime_convert(self, timestamp):
+        """Safely convert timestamp to datetime object"""
+        if timestamp is None:
+            return None
+        
+        # If it's already a datetime object, return it
+        if isinstance(timestamp, datetime):
+            return timestamp
+        
+        # If it's a Unix timestamp (integer), convert it
+        if isinstance(timestamp, (int, float)):
+            try:
+                return datetime.fromtimestamp(timestamp)
+            except (ValueError, OSError):
+                return None
+        
+        # If it's a string, try to parse it
+        if isinstance(timestamp, str):
+            try:
+                # Try parsing ISO format first
+                return datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+            except ValueError:
+                try:
+                    # Try parsing as timestamp
+                    return datetime.fromtimestamp(float(timestamp))
+                except (ValueError, OSError):
+                    return None
+        
+        return None
+    
     def get_customer_by_email(self, email: str) -> Optional[Dict]:
         """Get customer information by email"""
         with self.conn.cursor(cursor_factory=RealDictCursor) as cursor:
@@ -474,7 +504,7 @@ class UserPlanHistoryFetcher:
                         plan['recurring_interval_count']
                     ),
                     'subscription_status': sub['status'],
-                    'current_period_end': sub['current_period_end']
+                    'current_period_end': self.safe_datetime_convert(sub['current_period_end'])
                 })
         
         # Historical plans (from all subscriptions)
