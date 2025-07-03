@@ -1,0 +1,723 @@
+2025-07-02 15:20:11,188 - stripe_integration - INFO - setup_all_loggers:129 - ============================================================
+2025-07-02 15:20:11,188 - stripe_integration - INFO - setup_all_loggers:130 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:20:11,188 - stripe_integration - INFO - setup_all_loggers:131 - Timestamp: 2025-07-02T15:20:11.188903
+2025-07-02 15:20:11,189 - stripe_integration - INFO - setup_all_loggers:132 - Log Level: DEBUG
+2025-07-02 15:20:11,189 - stripe_integration - INFO - setup_all_loggers:133 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:20:11,189 - stripe_integration - INFO - setup_all_loggers:134 - ============================================================
+2025-07-02 15:46:33,425 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 15:46:33,425 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:46:33,425 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T15:46:33.425864
+2025-07-02 15:46:33,426 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 15:46:33,426 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:46:33,426 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 15:46:33,426 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 15:46:33,428 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 15:46:33,431 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 15:46:33,431 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 15:46:33,431 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 15:46:33,432 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 15:46:33,432 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 15:46:33,432 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 15:46:33,432 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 15:46:33,432 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 15:46:33,432 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 15:46:34,454 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 15:46:34,455 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:46:34,455 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T15:46:34.455110
+2025-07-02 15:46:34,455 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 15:46:34,455 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:46:34,455 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 15:46:34,455 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 15:46:34,457 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 15:46:34,465 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 15:46:34,465 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 15:46:34,465 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 15:46:34,465 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 15:46:34,466 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 15:46:34,466 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 15:46:34,466 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 15:46:34,466 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 15:46:34,466 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 15:48:01,487 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 15:48:01,488 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:48:01,488 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T15:48:01.488383
+2025-07-02 15:48:01,488 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 15:48:01,488 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:48:01,488 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 15:48:01,488 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 15:48:01,489 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:48:01,489 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 15:48:01,489 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:48:01,489 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 15:48:01,489 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 15:48:01,489 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 15:48:01,491 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 15:48:01,494 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 15:48:01,495 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 15:48:01,495 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 15:48:01,495 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 15:48:01,495 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 15:48:01,495 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 15:48:01,495 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 15:48:01,496 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 15:48:01,496 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 15:52:07,343 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 15:52:07,343 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:52:07,343 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T15:52:07.343753
+2025-07-02 15:52:07,343 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 15:52:07,344 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:52:07,344 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 15:52:07,344 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 15:52:07,346 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 15:52:07,350 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 15:52:07,350 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 15:52:07,350 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 15:52:07,350 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 15:52:07,351 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 15:52:07,351 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 15:52:07,351 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 15:52:07,351 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 15:52:07,351 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 15:56:04,264 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 15:56:04,264 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:56:04,264 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T15:56:04.264567
+2025-07-02 15:56:04,264 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 15:56:04,264 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:56:04,264 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 15:56:04,265 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 15:56:04,267 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 15:56:04,270 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 15:56:04,270 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 15:56:04,271 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 15:57:29,844 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 15:57:29,845 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 15:57:29,845 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T15:57:29.845240
+2025-07-02 15:57:29,845 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 15:57:29,845 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 15:57:29,845 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 15:57:29,845 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 15:57:29,845 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:57:29,846 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 15:57:29,846 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 15:57:29,846 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 15:57:29,846 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 15:57:29,846 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 15:57:29,848 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 15:57:29,852 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 15:57:29,852 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 15:57:29,853 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 15:57:29,853 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 15:57:29,853 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 15:57:29,853 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 15:57:29,853 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 15:57:29,854 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 15:57:29,854 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:26:03,602 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:26:03,603 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:26:03,603 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:26:03.603251
+2025-07-02 16:26:03,603 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:26:03,603 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:26:03,603 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:26:03,603 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:26:03,603 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:26:03,603 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:26:03,604 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:26:03,604 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:26:03,604 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:26:03,604 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:26:03,605 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:26:03,608 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:26:03,608 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:26:03,609 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:39:02,837 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:39:02,838 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:39:02,838 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:39:02.838129
+2025-07-02 16:39:02,838 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:39:02,838 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:39:02,838 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:39:02,838 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:39:02,838 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:39:02,838 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:39:02,838 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:39:02,838 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:39:02,838 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:39:02,839 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:39:02,840 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:39:02,843 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:39:02,843 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:39:02,844 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:39:02,844 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:39:02,844 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:39:02,844 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:39:02,844 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:39:02,844 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:39:02,845 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:39:03,863 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:39:03,863 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:39:03,863 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:39:03.863704
+2025-07-02 16:39:03,863 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:39:03,863 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:39:03,863 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:39:03,864 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:39:03,866 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:39:03,868 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:39:03,869 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:39:03,870 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:41:08,861 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook charge.succeeded: name 'store_stripe_event' is not defined
+2025-07-02 16:41:08,933 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook payment_method.attached: name 'store_stripe_event' is not defined
+2025-07-02 16:41:08,995 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook customer.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,040 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook customer.updated: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,149 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook checkout.session.completed: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,185 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook customer.subscription.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,278 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook payment_intent.succeeded: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,321 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook payment_intent.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,412 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,489 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.finalized: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,558 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.paid: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,650 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.payment_succeeded: name 'store_stripe_event' is not defined
+2025-07-02 16:45:20,910 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:45:20,911 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:45:20,911 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:45:20.911233
+2025-07-02 16:45:20,911 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:45:20,911 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:45:20,911 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:45:20,911 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:45:20,911 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:45:20,911 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:45:20,912 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:45:20,912 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:45:20,912 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:45:20,912 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:45:20,913 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:45:20,916 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:45:20,916 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:45:20,916 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:45:20,916 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:45:20,917 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:45:20,917 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:45:20,917 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:45:20,917 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:45:20,917 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:45:37,223 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:45:37,224 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:45:37,224 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:45:37.224175
+2025-07-02 16:45:37,224 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:45:37,224 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:45:37,224 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:45:37,224 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:45:37,224 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:45:37,225 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:45:37,225 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:45:37,225 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:45:37,225 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:45:37,225 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:45:37,228 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:45:37,234 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:45:37,234 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:45:37,234 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:45:37,234 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:45:37,234 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:45:37,241 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:45:37,241 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:45:37,241 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:45:37,241 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:46:12,370 - stripe_integration - INFO - webhook_received:712 - Processed charge.succeeded: ch_3RgOB3FRrO0B5OjV1hqR5QuP
+2025-07-02 16:46:12,371 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: charge.succeeded - evt_3RgOB3FRrO0B5OjV16u5LFu6
+2025-07-02 16:46:12,446 - stripe_integration - INFO - webhook_received:716 - Processed payment_method.attached: pm_1RgOB2FRrO0B5OjVCbV4W0SJ
+2025-07-02 16:46:12,448 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: payment_method.attached - evt_1RgOB6FRrO0B5OjVabkuNB89
+2025-07-02 16:46:12,472 - stripe_integration - DEBUG - upsert_customer:124 - Customer upsert completed: Stripe ID cus_SbbNeDyqsEtVeB -> DB ID 2
+2025-07-02 16:46:12,472 - stripe_integration - INFO - webhook_received:696 - Processed customer.created: cus_SbbNeDyqsEtVeB
+2025-07-02 16:46:12,474 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: customer.created - evt_1RgOB6FRrO0B5OjVTJJpAOon
+2025-07-02 16:46:12,594 - stripe_integration - DEBUG - upsert_customer:124 - Customer upsert completed: Stripe ID cus_SbbNeDyqsEtVeB -> DB ID 2
+2025-07-02 16:46:12,594 - stripe_integration - INFO - webhook_received:700 - Processed customer.updated: cus_SbbNeDyqsEtVeB
+2025-07-02 16:46:12,596 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: customer.updated - evt_1RgOB6FRrO0B5OjV75jzuJPJ
+2025-07-02 16:46:12,704 - stripe_integration - INFO - webhook_received:736 - Processed customer.subscription.created: sub_1RgOB5FRrO0B5OjVPMDrR0k0
+2025-07-02 16:46:12,705 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: customer.subscription.created - evt_1RgOB6FRrO0B5OjVCtlm8Qsj
+2025-07-02 16:46:12,816 - stripe_integration - INFO - webhook_received:708 - Processed payment_intent.succeeded: pi_3RgOB3FRrO0B5OjV1poFeVar
+2025-07-02 16:46:12,820 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: payment_intent.succeeded - evt_3RgOB3FRrO0B5OjV1fxQDT6S
+2025-07-02 16:46:12,854 - stripe_integration - INFO - webhook_received:704 - Processed payment_intent.created: pi_3RgOB3FRrO0B5OjV1poFeVar
+2025-07-02 16:46:12,855 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: payment_intent.created - evt_3RgOB3FRrO0B5OjV1tpMEkRn
+2025-07-02 16:46:13,141 - stripe_integration - INFO - webhook_received:720 - Processed invoice.created: in_1RgOB5FRrO0B5OjVULbUsA2v
+2025-07-02 16:46:13,143 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: invoice.created - evt_1RgOB6FRrO0B5OjVvq38JFVx
+2025-07-02 16:46:13,144 - stripe_integration - INFO - webhook_received:724 - Processed invoice.finalized: in_1RgOB5FRrO0B5OjVULbUsA2v
+2025-07-02 16:46:13,145 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: invoice.finalized - evt_1RgOB6FRrO0B5OjVh8NgQV1M
+2025-07-02 16:46:13,272 - stripe_integration - INFO - webhook_received:728 - Processed invoice.paid: in_1RgOB5FRrO0B5OjVULbUsA2v
+2025-07-02 16:46:13,273 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: invoice.paid - evt_1RgOB6FRrO0B5OjVMSdNip5e
+2025-07-02 16:46:13,317 - stripe_integration - INFO - webhook_received:732 - Processed invoice.payment_succeeded: in_1RgOB5FRrO0B5OjVULbUsA2v
+2025-07-02 16:46:13,323 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: invoice.payment_succeeded - evt_1RgOB6FRrO0B5OjVcE2o5TsB
+2025-07-02 16:46:17,886 - stripe_integration - DEBUG - upsert_customer:124 - Customer upsert completed: Stripe ID cus_SbbNeDyqsEtVeB -> DB ID 2
+2025-07-02 16:46:18,244 - stripe_integration - INFO - webhook_received:748 - Processed checkout.session.completed: cs_test_a1Bai2h0qN1J1HS6LXPQKCHL005ofbBpGzC7Ar4VMTLVfir4GTD8cfDw1p
+2025-07-02 16:46:18,244 - stripe_integration - INFO - webhook_received:758 - Successfully processed webhook event: checkout.session.completed - evt_1RgOBAFRrO0B5OjV8b6wFKg4
+2025-07-02 16:49:28,698 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:49:28,699 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:49:28,699 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:49:28.699264
+2025-07-02 16:49:28,699 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:49:28,699 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:49:28,699 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:49:28,700 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:49:28,700 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:49:28,700 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:49:28,700 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:49:28,700 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:49:28,703 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:49:28,704 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:49:28,711 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:49:28,719 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:49:28,720 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:49:28,721 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:50:32,986 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:50:32,987 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:50:32,988 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:50:32.988702
+2025-07-02 16:50:32,989 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:50:32,990 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:50:32,990 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:50:32,991 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:50:32,992 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:50:32,993 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:50:32,993 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:50:32,995 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:50:32,995 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:50:32,997 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:50:33,000 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:50:33,007 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:50:33,008 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:50:33,009 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:50:33,010 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:50:33,012 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:50:33,012 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:50:33,013 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:50:33,014 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:50:33,015 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:52:36,630 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:52:36,630 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:52:36,630 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:52:36.630979
+2025-07-02 16:52:36,631 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:52:36,631 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:52:36,631 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:52:36,631 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:52:36,631 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:52:36,631 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:52:36,631 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:52:36,631 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:52:36,631 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:52:36,632 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:52:36,633 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:52:36,644 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:52:36,644 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:52:36,644 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:52:36,644 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:52:36,645 - stripe_integration - INFO - log_system_info:138 -   FLASK_ENV: Not Set
+2025-07-02 16:52:36,645 - stripe_integration - INFO - log_system_info:138 -   FLASK_DEBUG: Not Set
+2025-07-02 16:52:36,645 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:52:36,645 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:52:36,645 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:54:54,380 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:54:54,380 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:54:54,380 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:54:54.380687
+2025-07-02 16:54:54,380 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:54:54,380 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:54:54,381 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:54:54,381 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:54:54,384 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:54:54,387 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:54:54,387 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:54:54,387 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:54:54,388 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:54:54,388 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:54:54,388 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:54:54,388 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:56:13,974 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:56:13,974 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:56:13,974 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:56:13.974599
+2025-07-02 16:56:13,974 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:56:13,974 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:56:13,974 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:56:13,975 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:56:13,975 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:56:13,975 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:56:13,975 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:56:13,976 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:56:13,976 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:56:13,977 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:56:13,979 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:56:13,986 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:56:13,987 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:56:13,988 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:56:13,989 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:56:13,990 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:56:13,991 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:56:13,991 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 16:57:27,137 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 16:57:27,138 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 16:57:27,138 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T16:57:27.138485
+2025-07-02 16:57:27,138 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 16:57:27,138 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 16:57:27,138 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 16:57:27,139 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 16:57:27,140 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:57:27,141 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 16:57:27,141 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 16:57:27,148 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 16:57:27,148 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 16:57:27,149 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 16:57:27,153 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 16:57:27,165 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 16:57:27,165 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 16:57:27,166 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 16:57:27,173 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 16:57:27,173 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 16:57:27,173 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 16:57:27,174 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:01:12,141 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:01:12,141 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:01:12,141 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:01:12.141446
+2025-07-02 17:01:12,141 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:01:12,141 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:01:12,141 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:01:12,141 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:01:12,141 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:01:12,142 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:01:12,142 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:01:12,142 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:01:12,142 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:01:12,142 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:01:12,144 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:01:12,153 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:01:12,153 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:01:12,153 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:01:12,153 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:01:12,153 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:01:12,154 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:01:12,154 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:09:19,296 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:09:19,296 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:09:19,296 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:09:19.296951
+2025-07-02 17:09:19,297 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:09:19,297 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:09:19,297 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:09:19,297 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:09:19,299 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:09:19,302 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:09:19,303 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:09:19,303 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:09:19,303 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:09:19,303 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:09:19,303 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:09:19,304 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:11:17,083 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:11:17,084 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:11:17,084 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:11:17.084393
+2025-07-02 17:11:17,084 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:11:17,084 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:11:17,084 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:11:17,084 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:11:17,084 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:11:17,085 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:11:17,085 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:11:17,085 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:11:17,085 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:11:17,085 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:11:17,089 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:11:17,092 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:11:17,092 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:11:17,092 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:11:17,092 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:11:17,092 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:11:17,092 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:11:17,093 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:11:57,145 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:11:57,145 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:11:57,146 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:11:57.146050
+2025-07-02 17:11:57,146 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:11:57,146 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:11:57,146 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:11:57,146 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:11:57,146 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:11:57,146 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:11:57,146 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:11:57,146 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:11:57,146 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:11:57,147 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:11:57,148 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:11:57,151 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:12:02,119 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:12:02,119 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:12:02,119 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:12:02.119718
+2025-07-02 17:12:02,119 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:12:02,119 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:12:02,120 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:12:02,120 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:12:02,120 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:12:02,120 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:12:02,120 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:12:02,121 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:12:02,121 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:12:02,121 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:12:02,126 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:12:02,132 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:12:02,133 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:12:02,133 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:12:02,133 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:12:02,133 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:12:02,133 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:12:02,133 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:12:03,099 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:12:03,100 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:12:03,100 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:12:03.100204
+2025-07-02 17:12:03,100 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:12:03,100 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:12:03,100 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:12:03,100 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:12:03,100 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:12:03,100 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:12:03,101 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:12:03,101 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:12:03,101 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:12:03,101 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:12:03,103 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:12:03,107 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:12:03,107 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:12:03,108 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:12:03,108 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:12:03,108 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:12:03,108 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:12:03,108 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:12:38,725 - stripe_integration - INFO - webhook_received:731 - Processed charge.succeeded: ch_3RgOaeFRrO0B5OjV1eEizaXM
+2025-07-02 17:12:38,728 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: charge.succeeded - evt_3RgOaeFRrO0B5OjV1AorDg29
+2025-07-02 17:12:38,785 - stripe_integration - INFO - webhook_received:735 - Processed payment_method.attached: pm_1RgOadFRrO0B5OjVTHmt1PVY
+2025-07-02 17:12:38,786 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: payment_method.attached - evt_1RgOagFRrO0B5OjVS5jiaXNp
+2025-07-02 17:12:38,834 - stripe_integration - DEBUG - upsert_customer:124 - Customer upsert completed: Stripe ID cus_Sbbo3MQnoLpCgE -> DB ID 5
+2025-07-02 17:12:38,835 - stripe_integration - INFO - webhook_received:699 - Processed customer.created: cus_Sbbo3MQnoLpCgE
+2025-07-02 17:12:38,844 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: customer.created - evt_1RgOagFRrO0B5OjVRLAxPGld
+2025-07-02 17:12:38,925 - stripe_integration - DEBUG - upsert_customer:124 - Customer upsert completed: Stripe ID cus_Sbbo3MQnoLpCgE -> DB ID 5
+2025-07-02 17:12:38,925 - stripe_integration - INFO - webhook_received:703 - Processed customer.updated: cus_Sbbo3MQnoLpCgE
+2025-07-02 17:12:38,933 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: customer.updated - evt_1RgOagFRrO0B5OjVkWiZsEwf
+2025-07-02 17:12:39,066 - stripe_integration - INFO - webhook_received:775 - Processed customer.subscription.created: sub_1RgOafFRrO0B5OjVcLYCyJTi
+2025-07-02 17:12:39,070 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: customer.subscription.created - evt_1RgOagFRrO0B5OjVQKurNBQ2
+2025-07-02 17:12:39,127 - stripe_integration - INFO - webhook_received:727 - Processed payment_intent.succeeded: pi_3RgOaeFRrO0B5OjV1M8R11dq
+2025-07-02 17:12:39,132 - stripe_integration - INFO - webhook_received:723 - Processed payment_intent.created: pi_3RgOaeFRrO0B5OjV1M8R11dq
+2025-07-02 17:12:39,134 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: payment_intent.succeeded - evt_3RgOaeFRrO0B5OjV10Uwv6wR
+2025-07-02 17:12:39,134 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: payment_intent.created - evt_3RgOaeFRrO0B5OjV1HqaObTh
+2025-07-02 17:12:39,221 - stripe_integration - INFO - webhook_received:743 - Processed invoice.created: in_1RgOafFRrO0B5OjVEaJCZSon
+2025-07-02 17:12:39,224 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: invoice.created - evt_1RgOagFRrO0B5OjVchr5Qco5
+2025-07-02 17:12:39,345 - stripe_integration - INFO - webhook_received:751 - Processed invoice.finalized: in_1RgOafFRrO0B5OjVEaJCZSon
+2025-07-02 17:12:39,346 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: invoice.finalized - evt_1RgOahFRrO0B5OjVYkNZ5cYS
+2025-07-02 17:12:39,432 - stripe_integration - INFO - webhook_received:755 - Processed invoice.paid: in_1RgOafFRrO0B5OjVEaJCZSon
+2025-07-02 17:12:39,436 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: invoice.paid - evt_1RgOahFRrO0B5OjVmTRfFjog
+2025-07-02 17:12:39,499 - stripe_integration - INFO - webhook_received:759 - Processed invoice.payment_succeeded: in_1RgOafFRrO0B5OjVEaJCZSon
+2025-07-02 17:12:39,502 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: invoice.payment_succeeded - evt_1RgOahFRrO0B5OjVnZ6n70Q9
+2025-07-02 17:12:42,448 - stripe_integration - DEBUG - upsert_customer:124 - Customer upsert completed: Stripe ID cus_Sbbo3MQnoLpCgE -> DB ID 5
+2025-07-02 17:12:42,800 - stripe_integration - INFO - webhook_received:787 - Processed checkout.session.completed: cs_test_a1q0KdTjE0md0mNMW3S64AJVKTSro78d6b24wVqN8d53AXVW5UDnmHp5wF
+2025-07-02 17:12:42,802 - stripe_integration - INFO - webhook_received:794 - Successfully processed webhook event: checkout.session.completed - evt_1RgOajFRrO0B5OjV63mjvTTg
+2025-07-02 17:17:10,301 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:17:10,301 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:17:10,308 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:17:10.308331
+2025-07-02 17:17:10,308 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:17:10,309 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:17:10,309 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:17:10,309 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:17:10,310 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:17:10,310 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:17:10,311 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:17:10,311 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:17:10,311 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:17:10,311 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:17:10,320 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:17:10,337 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:17:51,358 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:17:51,359 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:17:51,359 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:17:51.359649
+2025-07-02 17:17:51,359 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:17:51,359 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:17:51,360 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:17:51,360 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:17:51,363 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:17:51,368 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:17:51,368 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:17:51,368 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:17:51,369 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:17:51,369 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:17:51,369 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:17:51,369 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:19:29,829 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-02 17:19:29,830 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-02 17:19:29,830 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-02T17:19:29.830190
+2025-07-02 17:19:29,830 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-02 17:19:29,830 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-02 17:19:29,830 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-02 17:19:29,830 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-02 17:19:29,830 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:19:29,830 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-02 17:19:29,830 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-02 17:19:29,830 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-02 17:19:29,831 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-02 17:19:29,831 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-02 17:19:29,832 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-02 17:19:29,836 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-02 17:19:29,836 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-02 17:19:29,836 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-02 17:19:29,836 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-02 17:19:29,837 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-02 17:19:29,837 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-02 17:19:29,837 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-02 17:25:44,423 - stripe_integration - WARNING - webhook_received:1075 - Unhandled event type: checkout.session.expired
+2025-07-02 17:25:44,428 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: checkout.session.expired - evt_1RgOnMFRrO0B5OjVhoaLKnRf
+2025-07-02 17:27:59,561 - stripe_integration - WARNING - webhook_received:1075 - Unhandled event type: checkout.session.expired
+2025-07-02 17:27:59,562 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: checkout.session.expired - evt_1RgOpXFRrO0B5OjVKl5Xtscq
+2025-07-02 17:44:28,583 - stripe_integration - WARNING - webhook_received:1075 - Unhandled event type: checkout.session.expired
+2025-07-02 17:44:28,585 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: checkout.session.expired - evt_1RgP5UFRrO0B5OjVqFOsJriZ
+2025-07-03 01:48:20,147 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-03 01:48:20,147 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-03 01:48:20,147 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-03T01:48:20.147442
+2025-07-03 01:48:20,147 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-03 01:48:20,147 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-03 01:48:20,147 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-03 01:48:20,147 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-03 01:48:20,147 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-03 01:48:20,147 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-03 01:48:20,147 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-03 01:48:20,148 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-03 01:48:20,148 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-03 01:48:20,148 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-03 01:48:20,150 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-03 01:48:20,152 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-03 01:48:20,152 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-03 01:48:20,152 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-03 01:48:20,152 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-03 01:48:20,153 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-03 01:48:20,153 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-03 01:48:20,153 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-03 01:48:21,144 - stripe_integration - INFO - setup_all_loggers:107 - ============================================================
+2025-07-03 01:48:21,144 - stripe_integration - INFO - setup_all_loggers:108 - Stripe Integration Server - Logging Initialized
+2025-07-03 01:48:21,144 - stripe_integration - INFO - setup_all_loggers:109 - Timestamp: 2025-07-03T01:48:21.144844
+2025-07-03 01:48:21,144 - stripe_integration - INFO - setup_all_loggers:110 - Log Level: DEBUG
+2025-07-03 01:48:21,145 - stripe_integration - INFO - setup_all_loggers:111 - Logs Directory: /home/mithun/sgc-project/inteliqx/iqx-stripe-integration/logs
+2025-07-03 01:48:21,145 - stripe_integration - INFO - setup_all_loggers:112 - ============================================================
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_startup_banner:152 -     ┌─────────────────────────────────────────────────────────────┐
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_startup_banner:152 -     │          🔄 STRIPE INTEGRATION SERVER STARTING 🔄           │ 
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_startup_banner:152 -     │                                                             │
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_startup_banner:152 -     └─────────────────────────────────────────────────────────────┘
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_system_info:126 - System Information:
+2025-07-03 01:48:21,145 - stripe_integration - INFO - log_system_info:127 -   Python Version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+2025-07-03 01:48:21,147 - stripe_integration - INFO - log_system_info:128 -   Platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:129 -   Architecture: ('64bit', 'ELF')
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:130 -   Processor: x86_64
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:132 - Environment Variables:
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:138 -   BASE_URL: http://localhost:4242
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:138 -   STRIPE_SECRET_KEY: ***REDACTED***
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:138 -   STRIPE_WEBHOOK_SECRET: ***REDACTED***
+2025-07-03 01:48:21,150 - stripe_integration - INFO - log_system_info:138 -   PSQL_DB_URL: ***REDACTED***
+2025-07-03 01:50:09,914 - stripe_integration - INFO - webhook_received:1016 - Processed charge.succeeded: ch_3RgWfTFRrO0B5OjV0CYHXPc4
+2025-07-03 01:50:09,916 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: charge.succeeded - evt_3RgWfTFRrO0B5OjV09SHGAZr
+2025-07-03 01:50:09,971 - stripe_integration - INFO - webhook_received:1020 - Processed payment_method.attached: pm_1RgWfSFRrO0B5OjVM0ruGzPa
+2025-07-03 01:50:09,974 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: payment_method.attached - evt_1RgWfVFRrO0B5OjVHWthUm5C
+2025-07-03 01:50:10,038 - stripe_integration - DEBUG - upsert_customer:123 - Customer upsert completed: Stripe ID cus_Sbk9jhjDaDPiR9 -> DB ID 8
+2025-07-03 01:50:10,038 - stripe_integration - INFO - webhook_received:984 - Processed customer.created: cus_Sbk9jhjDaDPiR9
+2025-07-03 01:50:10,044 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: customer.created - evt_1RgWfVFRrO0B5OjV5jqpfLMe
+2025-07-03 01:50:10,122 - stripe_integration - DEBUG - upsert_customer:123 - Customer upsert completed: Stripe ID cus_Sbk9jhjDaDPiR9 -> DB ID 8
+2025-07-03 01:50:10,122 - stripe_integration - INFO - webhook_received:988 - Processed customer.updated: cus_Sbk9jhjDaDPiR9
+2025-07-03 01:50:10,126 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: customer.updated - evt_1RgWfVFRrO0B5OjVmGzehS0w
+2025-07-03 01:50:10,196 - stripe_integration - INFO - webhook_received:1060 - Processed customer.subscription.created: sub_1RgWfUFRrO0B5OjVdPIcUyzO
+2025-07-03 01:50:10,197 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: customer.subscription.created - evt_1RgWfVFRrO0B5OjVAQAX2IJ2
+2025-07-03 01:50:10,358 - stripe_integration - INFO - webhook_received:1012 - Processed payment_intent.succeeded: pi_3RgWfTFRrO0B5OjV0y5CcvnY
+2025-07-03 01:50:10,362 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: payment_intent.succeeded - evt_3RgWfTFRrO0B5OjV0s0JMbAo
+2025-07-03 01:50:10,366 - stripe_integration - INFO - webhook_received:1008 - Processed payment_intent.created: pi_3RgWfTFRrO0B5OjV0y5CcvnY
+2025-07-03 01:50:10,373 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: payment_intent.created - evt_3RgWfTFRrO0B5OjV09r0lDQq
+2025-07-03 01:50:10,480 - stripe_integration - INFO - webhook_received:1028 - Processed invoice.created: in_1RgWfUFRrO0B5OjVShy2sMEK
+2025-07-03 01:50:10,482 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: invoice.created - evt_1RgWfWFRrO0B5OjVI4f6AXkz
+2025-07-03 01:50:10,535 - stripe_integration - INFO - webhook_received:1036 - Processed invoice.finalized: in_1RgWfUFRrO0B5OjVShy2sMEK
+2025-07-03 01:50:10,538 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: invoice.finalized - evt_1RgWfWFRrO0B5OjVpspxmjWd
+2025-07-03 01:50:10,594 - stripe_integration - INFO - webhook_received:1040 - Processed invoice.paid: in_1RgWfUFRrO0B5OjVShy2sMEK
+2025-07-03 01:50:10,597 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: invoice.paid - evt_1RgWfWFRrO0B5OjVRoZiTgZK
+2025-07-03 01:50:10,667 - stripe_integration - INFO - webhook_received:1044 - Processed invoice.payment_succeeded: in_1RgWfUFRrO0B5OjVShy2sMEK
+2025-07-03 01:50:10,671 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: invoice.payment_succeeded - evt_1RgWfWFRrO0B5OjVcd6Rz1Zu
+2025-07-03 01:50:10,884 - stripe_integration - DEBUG - upsert_customer:123 - Customer upsert completed: Stripe ID cus_Sbk9jhjDaDPiR9 -> DB ID 8
+2025-07-03 01:50:11,237 - stripe_integration - INFO - webhook_received:1072 - Processed checkout.session.completed: cs_test_a1TFQXclwDqGJ4bd9RQffW5Tjg70X81WOHXDaj4XPXAQZ4fG2mnmEUMQWB
+2025-07-03 01:50:11,240 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: checkout.session.completed - evt_1RgWfVFRrO0B5OjVEc5ptD2Q
+2025-07-03 06:49:24,737 - stripe_integration - WARNING - webhook_received:1075 - Unhandled event type: balance.available
+2025-07-03 06:49:24,740 - stripe_integration - INFO - webhook_received:1079 - Successfully processed webhook event: balance.available - evt_1RgbL6FRrO0B5OjVeOTbPTp0

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Already Subscribed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-100 to-white">
+  <section class="bg-white rounded-2xl shadow-xl p-10 max-w-md w-full flex flex-col items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+    </svg>
+    <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center">You already have an active subscription</h2>
+    <div id="plan-info" class="text-gray-700 text-center mb-6"></div>
+    <div class="flex gap-4 w-full">
+      <form action="/cancel-subscription" method="POST" class="w-1/2">
+        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-lg font-semibold shadow hover:bg-red-600 w-full">Cancel Subscription</button>
+      </form>
+      <form action="/update-subscription" method="POST" class="w-1/2">
+        <select id="plan-select" name="lookup_key" class="w-full mb-2 p-2 border rounded"></select>
+        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold shadow hover:bg-indigo-700 w-full">Update Plan</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    fetch('/my-subscription')
+      .then(res => res.json())
+      .then(data => {
+        if(data.has_active) {
+          document.getElementById('plan-info').innerHTML = `
+            <div class="mb-2">Current Plan: <span class="font-semibold text-indigo-700">${data.plan}</span></div>
+            <div>Status: <span class="font-semibold">${data.status}</span></div>
+          `;
+          document.getElementById('update-lookup-key').value = data.plan;
+        }
+      });
+    fetch('/products')
+  .then(res => res.json())
+  .then(products => {
+    const select = document.getElementById('plan-select');
+    products.forEach(product => {
+      const option = document.createElement('option');
+      option.value = product.lookup_key;
+      option.textContent = `${product.name} (${(product.unit_amount/100).toFixed(2)} ${product.currency.toUpperCase()}/${product.interval})`;
+      select.appendChild(option);
+    });
+  });
+  </script>
+</body>
+</html>

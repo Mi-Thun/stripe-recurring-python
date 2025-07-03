@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Checkout canceled</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Canceled</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <section>
-    <p>Picked the wrong subscription? Shop around then come back to pay!</p>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-100 to-white">
+  <section class="bg-white rounded-2xl shadow-xl p-10 max-w-md w-full flex flex-col items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    <h2 id="cancel-title" class="text-2xl font-bold text-gray-800 mb-2">Checkout Canceled</h2>
+    <p id="cancel-message" class="text-gray-600 mb-6 text-center">Picked the wrong subscription? Shop around, then come back to pay!</p>
+    <a href="/checkout.html" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold shadow hover:bg-indigo-700 transition">Back to Pricing</a>
   </section>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('reason') === 'cancel_subscription') {
+      document.getElementById('cancel-title').textContent = 'Subscription Canceled';
+      document.getElementById('cancel-message').textContent = 'Your subscription has been successfully canceled.';
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,173 @@
+2025-07-02 16:46:12,354 - database - INFO - store_stripe_event:861 - Stored event evt_3RgOB3FRrO0B5OjV16u5LFu6 with ID 1
+2025-07-02 16:46:12,370 - database - INFO - upsert_charge:1005 - Upserted charge ch_3RgOB3FRrO0B5OjV1hqR5QuP -> DB ID 1
+2025-07-02 16:46:12,441 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVabkuNB89 with ID 2
+2025-07-02 16:46:12,445 - database - INFO - upsert_payment_method:921 - Upserted payment method pm_1RgOB2FRrO0B5OjVCbV4W0SJ -> DB ID 1
+2025-07-02 16:46:12,467 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVTJJpAOon with ID 3
+2025-07-02 16:46:12,467 - database - INFO - upsert_customer:69 - Starting customer upsert for Stripe ID: cus_SbbNeDyqsEtVeB, email: rayhan.swe@gmail.com
+2025-07-02 16:46:12,467 - database - DEBUG - upsert_customer:72 - Customer cus_SbbNeDyqsEtVeB address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-02 16:46:12,469 - database - INFO - upsert_customer:123 - Successfully upserted customer cus_SbbNeDyqsEtVeB with database ID: 2
+2025-07-02 16:46:12,592 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjV75jzuJPJ with ID 4
+2025-07-02 16:46:12,592 - database - INFO - upsert_customer:69 - Starting customer upsert for Stripe ID: cus_SbbNeDyqsEtVeB, email: rayhan.swe@gmail.com
+2025-07-02 16:46:12,592 - database - DEBUG - upsert_customer:72 - Customer cus_SbbNeDyqsEtVeB address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-02 16:46:12,594 - database - INFO - upsert_customer:123 - Successfully upserted customer cus_SbbNeDyqsEtVeB with database ID: 2
+2025-07-02 16:46:12,698 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVCtlm8Qsj with ID 5
+2025-07-02 16:46:12,703 - database - INFO - upsert_subscription_new:1104 - Upserted subscription sub_1RgOB5FRrO0B5OjVPMDrR0k0 -> DB ID 1
+2025-07-02 16:46:12,795 - database - INFO - store_stripe_event:861 - Stored event evt_3RgOB3FRrO0B5OjV1fxQDT6S with ID 6
+2025-07-02 16:46:12,798 - database - INFO - upsert_payment_intent:175 - Upserting payment_intent pi_3RgOB3FRrO0B5OjV1poFeVar for customer 2
+2025-07-02 16:46:12,816 - database - INFO - upsert_payment_intent:217 - PaymentIntent upserted: Stripe ID pi_3RgOB3FRrO0B5OjV1poFeVar -> DB ID 1
+2025-07-02 16:46:12,849 - database - INFO - store_stripe_event:861 - Stored event evt_3RgOB3FRrO0B5OjV1tpMEkRn with ID 7
+2025-07-02 16:46:12,852 - database - INFO - upsert_payment_intent:175 - Upserting payment_intent pi_3RgOB3FRrO0B5OjV1poFeVar for customer 2
+2025-07-02 16:46:12,853 - database - INFO - upsert_payment_intent:217 - PaymentIntent upserted: Stripe ID pi_3RgOB3FRrO0B5OjV1poFeVar -> DB ID 1
+2025-07-02 16:46:13,117 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVvq38JFVx with ID 8
+2025-07-02 16:46:13,131 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVh8NgQV1M with ID 9
+2025-07-02 16:46:13,140 - database - INFO - upsert_invoice_new:1185 - Upserted invoice in_1RgOB5FRrO0B5OjVULbUsA2v -> DB ID 1
+2025-07-02 16:46:13,143 - database - INFO - upsert_invoice_new:1185 - Upserted invoice in_1RgOB5FRrO0B5OjVULbUsA2v -> DB ID 1
+2025-07-02 16:46:13,256 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVMSdNip5e with ID 10
+2025-07-02 16:46:13,271 - database - INFO - upsert_invoice_new:1185 - Upserted invoice in_1RgOB5FRrO0B5OjVULbUsA2v -> DB ID 1
+2025-07-02 16:46:13,311 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOB6FRrO0B5OjVcE2o5TsB with ID 11
+2025-07-02 16:46:13,317 - database - INFO - upsert_invoice_new:1185 - Upserted invoice in_1RgOB5FRrO0B5OjVULbUsA2v -> DB ID 1
+2025-07-02 16:46:17,290 - database - INFO - store_stripe_event:861 - Stored event evt_1RgOBAFRrO0B5OjV8b6wFKg4 with ID 12
+2025-07-02 16:46:17,884 - database - INFO - upsert_customer:69 - Starting customer upsert for Stripe ID: cus_SbbNeDyqsEtVeB, email: rayhan.swe@gmail.com
+2025-07-02 16:46:17,884 - database - DEBUG - upsert_customer:72 - Customer cus_SbbNeDyqsEtVeB address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-02 16:46:17,885 - database - INFO - upsert_customer:123 - Successfully upserted customer cus_SbbNeDyqsEtVeB with database ID: 2
+2025-07-02 16:46:18,243 - database - INFO - upsert_subscription_new:1104 - Upserted subscription sub_1RgOB5FRrO0B5OjVPMDrR0k0 -> DB ID 1
+2025-07-02 16:46:18,243 - database - INFO - upsert_checkout_session:1209 - Processed checkout session cs_test_a1Bai2h0qN1J1HS6LXPQKCHL005ofbBpGzC7Ar4VMTLVfir4GTD8cfDw1p
+2025-07-02 17:12:38,714 - database - INFO - store_stripe_event:254 - Stored event evt_3RgOaeFRrO0B5OjV1AorDg29 with ID 13
+2025-07-02 17:12:38,725 - database - INFO - upsert_charge:398 - Upserted charge ch_3RgOaeFRrO0B5OjV1eEizaXM -> DB ID 2
+2025-07-02 17:12:38,781 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOagFRrO0B5OjVS5jiaXNp with ID 14
+2025-07-02 17:12:38,784 - database - INFO - upsert_payment_method:314 - Upserted payment method pm_1RgOadFRrO0B5OjVTHmt1PVY -> DB ID 2
+2025-07-02 17:12:38,829 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOagFRrO0B5OjVRLAxPGld with ID 15
+2025-07-02 17:12:38,831 - database - INFO - upsert_customer:69 - Starting customer upsert for Stripe ID: cus_Sbbo3MQnoLpCgE, email: admin@admin.com
+2025-07-02 17:12:38,831 - database - DEBUG - upsert_customer:72 - Customer cus_Sbbo3MQnoLpCgE address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-02 17:12:38,834 - database - INFO - upsert_customer:123 - Successfully upserted customer cus_Sbbo3MQnoLpCgE with database ID: 5
+2025-07-02 17:12:38,915 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOagFRrO0B5OjVkWiZsEwf with ID 16
+2025-07-02 17:12:38,916 - database - INFO - upsert_customer:69 - Starting customer upsert for Stripe ID: cus_Sbbo3MQnoLpCgE, email: admin@admin.com
+2025-07-02 17:12:38,916 - database - DEBUG - upsert_customer:72 - Customer cus_Sbbo3MQnoLpCgE address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-02 17:12:38,925 - database - INFO - upsert_customer:123 - Successfully upserted customer cus_Sbbo3MQnoLpCgE with database ID: 5
+2025-07-02 17:12:39,057 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOagFRrO0B5OjVQKurNBQ2 with ID 17
+2025-07-02 17:12:39,065 - database - INFO - upsert_subscription_new:497 - Upserted subscription sub_1RgOafFRrO0B5OjVcLYCyJTi -> DB ID 3
+2025-07-02 17:12:39,108 - database - INFO - store_stripe_event:254 - Stored event evt_3RgOaeFRrO0B5OjV10Uwv6wR with ID 18
+2025-07-02 17:12:39,117 - database - INFO - upsert_payment_intent:175 - Upserting payment_intent pi_3RgOaeFRrO0B5OjV1M8R11dq for customer 5
+2025-07-02 17:12:39,125 - database - INFO - store_stripe_event:254 - Stored event evt_3RgOaeFRrO0B5OjV1HqaObTh with ID 19
+2025-07-02 17:12:39,127 - database - INFO - upsert_payment_intent:217 - PaymentIntent upserted: Stripe ID pi_3RgOaeFRrO0B5OjV1M8R11dq -> DB ID 3
+2025-07-02 17:12:39,130 - database - INFO - upsert_payment_intent:175 - Upserting payment_intent pi_3RgOaeFRrO0B5OjV1M8R11dq for customer 5
+2025-07-02 17:12:39,131 - database - INFO - upsert_payment_intent:217 - PaymentIntent upserted: Stripe ID pi_3RgOaeFRrO0B5OjV1M8R11dq -> DB ID 3
+2025-07-02 17:12:39,211 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOagFRrO0B5OjVchr5Qco5 with ID 20
+2025-07-02 17:12:39,216 - database - INFO - upsert_invoice_new:578 - Upserted invoice in_1RgOafFRrO0B5OjVEaJCZSon -> DB ID 5
+2025-07-02 17:12:39,221 - database - INFO - upsert_invoice_line_item:1030 - Upserted invoice line item il_1RgOaeFRrO0B5OjVXF98myWC -> DB ID 1
+2025-07-02 17:12:39,332 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOahFRrO0B5OjVYkNZ5cYS with ID 21
+2025-07-02 17:12:39,341 - database - INFO - upsert_invoice_new:578 - Upserted invoice in_1RgOafFRrO0B5OjVEaJCZSon -> DB ID 5
+2025-07-02 17:12:39,344 - database - INFO - upsert_invoice_line_item:1030 - Upserted invoice line item il_1RgOaeFRrO0B5OjVXF98myWC -> DB ID 1
+2025-07-02 17:12:39,423 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOahFRrO0B5OjVmTRfFjog with ID 22
+2025-07-02 17:12:39,432 - database - INFO - upsert_invoice_new:578 - Upserted invoice in_1RgOafFRrO0B5OjVEaJCZSon -> DB ID 5
+2025-07-02 17:12:39,493 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOahFRrO0B5OjVnZ6n70Q9 with ID 23
+2025-07-02 17:12:39,498 - database - INFO - upsert_invoice_new:578 - Upserted invoice in_1RgOafFRrO0B5OjVEaJCZSon -> DB ID 5
+2025-07-02 17:12:41,887 - database - INFO - store_stripe_event:254 - Stored event evt_1RgOajFRrO0B5OjV63mjvTTg with ID 24
+2025-07-02 17:12:42,445 - database - INFO - upsert_customer:69 - Starting customer upsert for Stripe ID: cus_Sbbo3MQnoLpCgE, email: admin@admin.com
+2025-07-02 17:12:42,446 - database - DEBUG - upsert_customer:72 - Customer cus_Sbbo3MQnoLpCgE address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-02 17:12:42,447 - database - INFO - upsert_customer:123 - Successfully upserted customer cus_Sbbo3MQnoLpCgE with database ID: 5
+2025-07-02 17:12:42,799 - database - INFO - upsert_subscription_new:497 - Upserted subscription sub_1RgOafFRrO0B5OjVcLYCyJTi -> DB ID 3
+2025-07-02 17:12:42,800 - database - INFO - upsert_checkout_session:602 - Processed checkout session cs_test_a1q0KdTjE0md0mNMW3S64AJVKTSro78d6b24wVqN8d53AXVW5UDnmHp5wF
+2025-07-02 17:25:44,422 - database - INFO - store_stripe_event:253 - Stored event evt_1RgOnMFRrO0B5OjVhoaLKnRf with ID 25
+2025-07-02 17:27:59,560 - database - INFO - store_stripe_event:253 - Stored event evt_1RgOpXFRrO0B5OjVKl5Xtscq with ID 26
+2025-07-02 17:44:28,582 - database - INFO - store_stripe_event:253 - Stored event evt_1RgP5UFRrO0B5OjVqFOsJriZ with ID 27
+2025-07-03 01:50:09,912 - database - INFO - store_stripe_event:253 - Stored event evt_3RgWfTFRrO0B5OjV09SHGAZr with ID 28
+2025-07-03 01:50:09,914 - database - INFO - upsert_charge:397 - Upserted charge ch_3RgWfTFRrO0B5OjV0CYHXPc4 -> DB ID 3
+2025-07-03 01:50:09,967 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfVFRrO0B5OjVHWthUm5C with ID 29
+2025-07-03 01:50:09,970 - database - INFO - upsert_payment_method:313 - Upserted payment method pm_1RgWfSFRrO0B5OjVM0ruGzPa -> DB ID 3
+2025-07-03 01:50:10,034 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfVFRrO0B5OjV5jqpfLMe with ID 30
+2025-07-03 01:50:10,036 - database - INFO - upsert_customer:68 - Starting customer upsert for Stripe ID: cus_Sbk9jhjDaDPiR9, email: mithun@sgcsoft.net
+2025-07-03 01:50:10,036 - database - DEBUG - upsert_customer:71 - Customer cus_Sbk9jhjDaDPiR9 address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-03 01:50:10,038 - database - INFO - upsert_customer:122 - Successfully upserted customer cus_Sbk9jhjDaDPiR9 with database ID: 8
+2025-07-03 01:50:10,119 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfVFRrO0B5OjVmGzehS0w with ID 31
+2025-07-03 01:50:10,120 - database - INFO - upsert_customer:68 - Starting customer upsert for Stripe ID: cus_Sbk9jhjDaDPiR9, email: mithun@sgcsoft.net
+2025-07-03 01:50:10,120 - database - DEBUG - upsert_customer:71 - Customer cus_Sbk9jhjDaDPiR9 address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-03 01:50:10,122 - database - INFO - upsert_customer:122 - Successfully upserted customer cus_Sbk9jhjDaDPiR9 with database ID: 8
+2025-07-03 01:50:10,189 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfVFRrO0B5OjVAQAX2IJ2 with ID 32
+2025-07-03 01:50:10,196 - database - INFO - upsert_subscription_new:496 - Upserted subscription sub_1RgWfUFRrO0B5OjVdPIcUyzO -> DB ID 5
+2025-07-03 01:50:10,282 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfVFRrO0B5OjVEc5ptD2Q with ID 33
+2025-07-03 01:50:10,349 - database - INFO - store_stripe_event:253 - Stored event evt_3RgWfTFRrO0B5OjV0s0JMbAo with ID 34
+2025-07-03 01:50:10,355 - database - INFO - upsert_payment_intent:174 - Upserting payment_intent pi_3RgWfTFRrO0B5OjV0y5CcvnY for customer 8
+2025-07-03 01:50:10,358 - database - INFO - upsert_payment_intent:216 - PaymentIntent upserted: Stripe ID pi_3RgWfTFRrO0B5OjV0y5CcvnY -> DB ID 5
+2025-07-03 01:50:10,361 - database - INFO - store_stripe_event:253 - Stored event evt_3RgWfTFRrO0B5OjV09r0lDQq with ID 35
+2025-07-03 01:50:10,364 - database - INFO - upsert_payment_intent:174 - Upserting payment_intent pi_3RgWfTFRrO0B5OjV0y5CcvnY for customer 8
+2025-07-03 01:50:10,366 - database - INFO - upsert_payment_intent:216 - PaymentIntent upserted: Stripe ID pi_3RgWfTFRrO0B5OjV0y5CcvnY -> DB ID 5
+2025-07-03 01:50:10,459 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfWFRrO0B5OjVI4f6AXkz with ID 36
+2025-07-03 01:50:10,473 - database - INFO - upsert_invoice_new:577 - Upserted invoice in_1RgWfUFRrO0B5OjVShy2sMEK -> DB ID 9
+2025-07-03 01:50:10,480 - database - INFO - upsert_invoice_line_item:743 - Upserted invoice line item il_1RgWfTFRrO0B5OjV2DpJBez6 -> DB ID 3
+2025-07-03 01:50:10,530 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfWFRrO0B5OjVpspxmjWd with ID 37
+2025-07-03 01:50:10,533 - database - INFO - upsert_invoice_new:577 - Upserted invoice in_1RgWfUFRrO0B5OjVShy2sMEK -> DB ID 9
+2025-07-03 01:50:10,535 - database - INFO - upsert_invoice_line_item:743 - Upserted invoice line item il_1RgWfTFRrO0B5OjV2DpJBez6 -> DB ID 3
+2025-07-03 01:50:10,589 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfWFRrO0B5OjVRoZiTgZK with ID 38
+2025-07-03 01:50:10,594 - database - INFO - upsert_invoice_new:577 - Upserted invoice in_1RgWfUFRrO0B5OjVShy2sMEK -> DB ID 9
+2025-07-03 01:50:10,662 - database - INFO - store_stripe_event:253 - Stored event evt_1RgWfWFRrO0B5OjVcd6Rz1Zu with ID 39
+2025-07-03 01:50:10,667 - database - INFO - upsert_invoice_new:577 - Upserted invoice in_1RgWfUFRrO0B5OjVShy2sMEK -> DB ID 9
+2025-07-03 01:50:10,880 - database - INFO - upsert_customer:68 - Starting customer upsert for Stripe ID: cus_Sbk9jhjDaDPiR9, email: mithun@sgcsoft.net
+2025-07-03 01:50:10,881 - database - DEBUG - upsert_customer:71 - Customer cus_Sbk9jhjDaDPiR9 address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-03 01:50:10,883 - database - INFO - upsert_customer:122 - Successfully upserted customer cus_Sbk9jhjDaDPiR9 with database ID: 8
+2025-07-03 01:50:11,237 - database - INFO - upsert_subscription_new:496 - Upserted subscription sub_1RgWfUFRrO0B5OjVdPIcUyzO -> DB ID 5
+2025-07-03 01:50:11,237 - database - INFO - upsert_checkout_session:887 - Processed checkout session cs_test_a1TFQXclwDqGJ4bd9RQffW5Tjg70X81WOHXDaj4XPXAQZ4fG2mnmEUMQWB
+2025-07-03 06:49:24,736 - database - INFO - store_stripe_event:253 - Stored event evt_1RgbL6FRrO0B5OjVeOTbPTp0 with ID 40

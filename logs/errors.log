@@ -1,0 +1,12 @@
+2025-07-02 16:41:08,861 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook charge.succeeded: name 'store_stripe_event' is not defined
+2025-07-02 16:41:08,933 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook payment_method.attached: name 'store_stripe_event' is not defined
+2025-07-02 16:41:08,995 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook customer.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,040 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook customer.updated: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,149 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook checkout.session.completed: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,185 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook customer.subscription.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,278 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook payment_intent.succeeded: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,321 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook payment_intent.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,412 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.created: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,489 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.finalized: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,558 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.paid: name 'store_stripe_event' is not defined
+2025-07-02 16:41:09,650 - stripe_integration - ERROR - webhook_received:380 - Error processing webhook invoice.payment_succeeded: name 'store_stripe_event' is not defined
