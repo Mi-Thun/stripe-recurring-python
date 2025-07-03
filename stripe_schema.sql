@@ -337,15 +337,3 @@ LEFT JOIN subscription_items si ON s.id = si.subscription_id
 LEFT JOIN prices p ON si.price_id = p.id
 LEFT JOIN products pr ON p.product_id = pr.id
 WHERE s.status IN ('active', 'trialing');
-
-CREATE VIEW recent_events_summary AS
-SELECT 
-    event_type,
-    COUNT(*) as event_count,
-    MAX(created_at) as last_event_time,
-    COUNT(CASE WHEN processing_status = 'processed' THEN 1 END) as processed_count,
-    COUNT(CASE WHEN processing_status = 'failed' THEN 1 END) as failed_count
-FROM stripe_events 
-WHERE created_at >= NOW() - INTERVAL '24 hours'
-GROUP BY event_type
-ORDER BY event_count DESC;

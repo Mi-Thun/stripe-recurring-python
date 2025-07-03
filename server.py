@@ -1098,13 +1098,13 @@ def webhook_received():
 def cancel_subscription():
     user_id = get_current_user_id()
     sub = load_latest_subscription_for_user(user_id)
-    if not sub or 'id' not in sub:
+    if not sub or 'stripe_id' not in sub:
         return jsonify({'error': 'No active subscription found'}), 400
     try:
-        stripe.Subscription.delete(sub['id'])
+        stripe.Subscription.delete(sub['stripe_id'])
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("DELETE FROM subscriptions WHERE customer_id = %s", (user_id,))
+        cur.execute("UPDATE subscriptions SET status = 'canceled', canceled_at = CURRENT_TIMESTAMP WHERE stripe_id = %s", (sub['stripe_id'],))
         conn.commit()
         cur.close()
         conn.close()
@@ -1123,10 +1123,10 @@ def update_subscription():
     try:
         prices = stripe.Price.list(lookup_keys=[lookup_key], expand=['data.product'])
         new_price_id = prices.data[0].id
-        subscription = stripe.Subscription.retrieve(sub['id'])
+        subscription = stripe.Subscription.retrieve(sub['stripe_id'])
         item_id = subscription['items']['data'][0]['id']
         stripe.Subscription.modify(
-            sub['id'],
+            sub['stripe_id'],
             cancel_at_period_end=False,
             proration_behavior='create_prorations',
             items=[{'id': item_id, 'price': new_price_id}]
