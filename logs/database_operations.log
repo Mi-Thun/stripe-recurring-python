@@ -246,3 +246,49 @@
 2025-07-04 01:03:38,249 - database - INFO - upsert_invoice_item:830 - Upserted invoice item ii_1RgsQ1FRrO0B5OjVVGN4CkVg -> DB ID 5
 2025-07-04 01:03:38,269 - database - INFO - store_stripe_event:253 - Stored event evt_1RgsQ1FRrO0B5OjVE9GQQTzF with ID 61
 2025-07-04 01:03:38,276 - database - INFO - upsert_invoice_item:830 - Upserted invoice item ii_1RgsQ1FRrO0B5OjVwhZdBaBw -> DB ID 6
+2025-07-04 03:13:14,625 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguROFRrO0B5OjVb3n8dGPc -> DB ID 17
+2025-07-04 03:13:14,786 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguROFRrO0B5OjVb3n8dGPc -> DB ID 17
+2025-07-04 03:16:59,331 - database - INFO - upsert_customer:672 - Starting customer upsert for Stripe ID: cus_SbyuTObbyfQcET, email: mithun@sgcsoft.net
+2025-07-04 03:16:59,331 - database - DEBUG - upsert_customer:675 - Customer cus_SbyuTObbyfQcET address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-04 03:16:59,333 - database - INFO - upsert_customer:726 - Successfully upserted customer cus_SbyuTObbyfQcET with database ID: 11
+2025-07-04 03:16:59,450 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguV2FRrO0B5OjV0J9G1SRp -> DB ID 19
+2025-07-04 03:16:59,937 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguV2FRrO0B5OjV0J9G1SRp -> DB ID 19
+2025-07-04 03:17:14,465 - database - INFO - upsert_customer:672 - Starting customer upsert for Stripe ID: cus_SbyuTObbyfQcET, email: mithun@sgcsoft.net
+2025-07-04 03:17:14,466 - database - DEBUG - upsert_customer:675 - Customer cus_SbyuTObbyfQcET address data: {
+  "city": null,
+  "country": "BD",
+  "line1": null,
+  "line2": null,
+  "postal_code": null,
+  "state": null
+}
+2025-07-04 03:17:14,468 - database - INFO - upsert_customer:726 - Successfully upserted customer cus_SbyuTObbyfQcET with database ID: 11
+2025-07-04 03:17:14,606 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguV2FRrO0B5OjV0J9G1SRp -> DB ID 19
+2025-07-04 03:20:30,162 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguYQFRrO0B5OjVgC0SfdFv -> DB ID 22
+2025-07-04 03:20:30,371 - database - INFO - upsert_invoice_new:1000 - Upserted invoice in_1RguYQFRrO0B5OjVgC0SfdFv -> DB ID 22
+2025-07-04 03:27:11,646 - database - INFO - upsert_subscription_new:934 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:29:47,725 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:29:52,379 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:30:23,251 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:30:44,800 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:32:47,025 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:33:13,941 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 03:33:24,205 - database - INFO - upsert_subscription_new:947 - Upserted subscription sub_1RguYPFRrO0B5OjVt2kR3Toj -> DB ID 12
+2025-07-04 14:15:06,661 - database - INFO - upsert_customer:702 - Starting customer upsert for Stripe ID: cus_ScJO8dfygXv5b1, email: mithun@sgcsoft.net
+2025-07-04 14:15:06,661 - database - DEBUG - upsert_customer:705 - Customer cus_ScJO8dfygXv5b1 address data: {}
+2025-07-04 14:15:06,663 - database - INFO - upsert_customer:756 - Successfully upserted customer cus_ScJO8dfygXv5b1 with database ID: 16
+2025-07-04 14:15:30,346 - database - INFO - upsert_customer:702 - Starting customer upsert for Stripe ID: cus_ScJO8dfygXv5b1, email: mithun@sgcsoft.net
+2025-07-04 14:15:30,346 - database - DEBUG - upsert_customer:705 - Customer cus_ScJO8dfygXv5b1 address data: {}
+2025-07-04 14:15:30,348 - database - INFO - upsert_customer:756 - Successfully upserted customer cus_ScJO8dfygXv5b1 with database ID: 16
+2025-07-04 14:15:30,865 - database - INFO - upsert_invoice_new:1030 - Upserted invoice in_1Rh4mJFRrO0B5OjVv6zmg0UN -> DB ID 24
+2025-07-04 14:15:31,071 - database - INFO - upsert_invoice_new:1030 - Upserted invoice in_1Rh4mJFRrO0B5OjVv6zmg0UN -> DB ID 24
+2025-07-04 14:17:01,363 - database - INFO - upsert_subscription_new:949 - Upserted subscription sub_1Rh4mJFRrO0B5OjVvTYaAJeB -> DB ID 20
+2025-07-04 14:17:48,453 - database - INFO - upsert_subscription_new:949 - Upserted subscription sub_1Rh4mJFRrO0B5OjVvTYaAJeB -> DB ID 20
+2025-07-04 14:18:57,191 - database - INFO - upsert_subscription_new:949 - Upserted subscription sub_1Rh4mJFRrO0B5OjVvTYaAJeB -> DB ID 20

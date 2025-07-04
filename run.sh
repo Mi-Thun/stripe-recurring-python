@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Stripe SaaS Dashboard Application
-# This script runs the complete dashboard with authentication, plans, and analytics
-
-echo "🚀 Starting Stripe SaaS Dashboard..."
-
 # Check if virtual environment exists
 if [ ! -d "venv" ]; then
     echo "📦 Creating virtual environment..."
@@ -62,16 +57,6 @@ finally:
     if 'conn' in locals():
         conn.close()
 "
-
-echo ""
-echo "🌟 Dashboard Features:"
-echo "   • User Authentication (Login/Signup)"
-echo "   • Subscription Plans Management"
-echo "   • Plan Change Analytics"
-echo "   • Proration Tracking"
-echo "   • Billing History"
-echo "   • Customer Portal Integration"
-echo ""
 echo "📱 Available Routes:"
 echo "   • http://localhost:4242/ - Home page"
 echo "   • http://localhost:4242/login - User login"
@@ -81,10 +66,7 @@ echo "   • http://localhost:4242/dashboard - User dashboard"
 echo "   • http://localhost:4242/analytics - Advanced analytics"
 echo "   • http://localhost:4242/profile - User profile"
 echo "   • http://localhost:4242/about - About page"
-echo ""
-echo "🔧 For Stripe webhook testing, run in another terminal:"
-echo "   stripe listen --forward-to localhost:4242/webhook"
-echo ""
+
 
 # Start the Flask application
 python3 app.py
