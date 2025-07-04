@@ -1,3 +1,13 @@
+-- 0. Create app_users table if it doesn't exist
+CREATE TABLE IF NOT EXISTS app_users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(256) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- 1. Main Events Table - stores all raw Stripe events
 CREATE TABLE stripe_events (
     id SERIAL PRIMARY KEY,

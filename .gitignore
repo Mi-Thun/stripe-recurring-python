@@ -1,7 +1,11 @@
 .env
 ./venv/
+venv/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.db    
+*.db
+.DS_Store
+*.log
+backup_*.json    
